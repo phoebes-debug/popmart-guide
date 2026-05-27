@@ -3,10 +3,15 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
-<meta name="theme-color" content="#FCEE21" />
+<meta name="theme-color" content="#FFF4A3" />
 
 <title>POP MART — IP 指南 (Unofficial, but Doodle)</title>
 <meta name="description" content="一个关于 Pop Mart 旗下主要 IP 的非官方介绍网站。手绘涂鸦风格。" />
+
+<!-- Google Fonts: Fredoka (英文圆润) + ZCOOL KuaiLe (中文站酷快乐体, 幼圆可爱) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=ZCOOL+KuaiLe&display=swap" rel="stylesheet">
 
 <style>
   /* ============================================
@@ -15,14 +20,15 @@
      ============================================ */
 
   :root {
-    --bg: #FCEE21;
-    --pink: #FF3399;
-    --blue: #00CCFF;
-    --green: #39FF14;
-    --orange: #FF6B35;
-    --purple: #B026FF;
-    --ink: #000000;
-    --paper: #FFF8E1;
+    --bg: #FFF4A3;       /* 奶黄（原 #FCEE21 → 降饱和） */
+    --pink: #FF8FB8;     /* 樱花粉（原 #FF3399 → 柔粉） */
+    --blue: #A8DDED;     /* 粉天蓝（原 #00CCFF → 柔蓝） */
+    --green: #B8E3B0;    /* 薄荷绿（原 #39FF14 霓虹绿 → 薄荷） */
+    --orange: #FFB088;   /* 蜜桃橙（原 #FF6B35 → 柔橙） */
+    --purple: #C9A8E8;   /* 薰衣草紫（原 #B026FF → 柔紫） */
+    --pink-deep: #FF6FA3;/* 深一档粉，用于强调 */
+    --ink: #3A2A1F;      /* 墨色（深暖棕，比纯黑柔很多） */
+    --paper: #FFFBED;    /* 奶白纸 */
   }
 
   * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -32,11 +38,20 @@
   body {
     background: var(--bg);
     color: var(--ink);
-    font-family: 'Comic Sans MS', 'Marker Felt', 'PingFang SC', 'Microsoft YaHei', sans-serif;
-    line-height: 1.5;
+    font-family: 'Fredoka', 'ZCOOL KuaiLe', 'PingFang SC', 'Hiragino Maru Gothic ProN', '幼圆', 'YouYuan', 'Microsoft YaHei', sans-serif;
+    font-weight: 500;
+    line-height: 1.55;
     overflow-x: hidden;
     background-image:
-      url("data:image/svg+xml;utf8,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' seed='3'/%3E%3CfeColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.12 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      url("data:image/svg+xml;utf8,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' seed='3'/%3E%3CfeColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.08 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  /* 所有标题/数字类 Fredoka 字体默认 700 */
+  .logo, .hero-bubble h1, .hero-stat-num, .stat-num, .section-title,
+  .ip-name, .ip-series-title, .timeline-year, .shop-title, .shop-btn,
+  .shop-sticker, .footer-title, .fact-num, .labubu-title, .labubu-crown,
+  .labubu-celeb strong, .hero-cta {
+    font-weight: 700 !important;
   }
 
   /* 自定义手绘光标 */
@@ -62,7 +77,7 @@
     display: flex;
     align-items: center;
     gap: 12px;
-    font-family: 'Bangers', 'Impact', sans-serif;
+    font-family: 'Fredoka', 'ZCOOL KuaiLe', 'PingFang SC', sans-serif;
     font-size: 28px;
     font-weight: 900;
   }
@@ -98,16 +113,15 @@
   nav a {
     text-decoration: none;
     color: var(--ink);
-    font-weight: 900;
-    font-size: 13px;
+    font-weight: 600;
+    font-size: 14px;
     padding: 7px 14px;
     background: white;
     border: 3px solid var(--ink);
     border-radius: 20px 25px 20px 25px;
     box-shadow: 3px 3px 0 var(--ink);
     transition: all 0.15s ease;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.02em;
   }
 
   nav a:hover {
@@ -149,7 +163,7 @@
   }
 
   .section-title {
-    font-family: 'Bangers', 'Impact', sans-serif;
+    font-family: 'Fredoka', 'ZCOOL KuaiLe', 'PingFang SC', sans-serif;
     font-size: clamp(40px, 7vw, 80px);
     font-weight: 900;
     line-height: 1;
@@ -240,7 +254,7 @@
   }
 
   .hero-bubble h1 {
-    font-family: 'Bangers', 'Impact', sans-serif;
+    font-family: 'Fredoka', 'ZCOOL KuaiLe', 'PingFang SC', sans-serif;
     font-size: clamp(48px, 9vw, 110px);
     line-height: 0.9;
     text-shadow: 5px 5px 0 var(--ink);
@@ -264,17 +278,18 @@
   .hero-cta {
     display: inline-block;
     background: var(--ink);
-    color: var(--pink);
-    font-family: 'Bangers', sans-serif;
+    color: #FFF4A3;
+    font-family: 'Fredoka', 'ZCOOL KuaiLe', 'PingFang SC', sans-serif;
+    font-weight: 700;
     font-size: clamp(18px, 2.5vw, 26px);
-    padding: 12px 32px;
+    padding: 14px 34px;
     border-radius: 50px;
     text-decoration: none;
     border: 4px solid var(--ink);
     box-shadow: 6px 6px 0 var(--pink);
     transform: rotate(-1deg);
     transition: all 0.2s;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.03em;
   }
 
   .hero-cta:hover {
@@ -310,7 +325,7 @@
   }
 
   .hero-stat-num {
-    font-family: 'Bangers', sans-serif;
+    font-family: 'Fredoka', 'ZCOOL KuaiLe', 'PingFang SC', sans-serif;
     font-size: clamp(36px, 5vw, 52px);
     line-height: 1;
     color: var(--pink);
@@ -330,8 +345,8 @@
     background:
       repeating-linear-gradient(
         45deg,
-        var(--pink) 0px, var(--pink) 20px,
-        #ff66b3 20px, #ff66b3 40px
+        #FFB0C9 0px, #FFB0C9 22px,
+        #FFC8D9 22px, #FFC8D9 44px
       );
     margin: 30px 0;
     padding: 40px 24px;
@@ -410,7 +425,7 @@
     padding: 8px 18px;
     border: 4px solid var(--ink);
     border-radius: 30px;
-    font-family: 'Bangers', sans-serif;
+    font-family: 'Fredoka', 'ZCOOL KuaiLe', 'PingFang SC', sans-serif;
     font-size: 20px;
     letter-spacing: 0.05em;
     box-shadow: 4px 4px 0 var(--ink);
@@ -419,7 +434,7 @@
   }
 
   .labubu-title {
-    font-family: 'Bangers', sans-serif;
+    font-family: 'Fredoka', 'ZCOOL KuaiLe', 'PingFang SC', sans-serif;
     font-size: clamp(60px, 10vw, 120px);
     line-height: 0.9;
     color: white;
@@ -466,7 +481,7 @@
   .fact-card:nth-child(4) { transform: rotate(-0.5deg); background: var(--orange); color: white; }
 
   .fact-num {
-    font-family: 'Bangers', sans-serif;
+    font-family: 'Fredoka', 'ZCOOL KuaiLe', 'PingFang SC', sans-serif;
     font-size: 32px;
     line-height: 1;
     display: block;
@@ -492,7 +507,7 @@
 
   .labubu-celeb strong {
     color: var(--green);
-    font-family: 'Bangers', sans-serif;
+    font-family: 'Fredoka', 'ZCOOL KuaiLe', 'PingFang SC', sans-serif;
     font-size: 20px;
   }
 
@@ -525,7 +540,7 @@
   }
 
   .stat-num {
-    font-family: 'Bangers', sans-serif;
+    font-family: 'Fredoka', 'ZCOOL KuaiLe', 'PingFang SC', sans-serif;
     font-size: 56px;
     line-height: 1;
     color: var(--pink);
@@ -555,6 +570,8 @@
     overflow: hidden;
     transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
     position: relative;
+    display: flex;
+    flex-direction: column;
   }
 
   .ip-card:nth-child(odd) { transform: rotate(-1deg); }
@@ -765,22 +782,26 @@
   .ip-figure .fig-tag.classic { background: var(--blue); color: var(--ink); }
 
   .ip-body {
-    padding: 16px 18px;
+    padding: 18px 20px 22px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
   }
 
   .ip-name {
-    font-family: 'Bangers', sans-serif;
+    font-family: 'Fredoka', 'ZCOOL KuaiLe', 'PingFang SC', sans-serif;
     font-size: 30px;
-    line-height: 1;
-    margin-bottom: 6px;
+    line-height: 1.1;
+    margin-bottom: 10px;
     letter-spacing: 0.01em;
   }
 
   .ip-desc {
-    font-size: 13px;
-    line-height: 1.5;
-    margin-bottom: 16px;
-    color: #222;
+    font-size: 13.5px;
+    line-height: 1.65;
+    margin-bottom: 20px;
+    color: #3A2A1F;
+    flex: 1;
   }
 
   .doodle-underline {
@@ -803,7 +824,7 @@
 
   .ip-series-title {
     display: block;
-    font-family: 'Bangers', sans-serif;
+    font-family: 'Fredoka', 'ZCOOL KuaiLe', 'PingFang SC', sans-serif;
     font-size: 16px;
     margin-bottom: 6px;
     color: var(--pink);
@@ -829,10 +850,10 @@
 
   /* 各 IP 形象区背景色 */
   .ip-card:nth-child(1) .ip-figure { background: #FFE4E1; }
-  .ip-card:nth-child(2) .ip-figure { background: #1a1a1a; }
-  .ip-card:nth-child(2) .ip-figure svg { filter: drop-shadow(3px 3px 0 #ff3399); }
+  .ip-card:nth-child(2) .ip-figure { background: #4A3F38; }
+  .ip-card:nth-child(2) .ip-figure svg { filter: drop-shadow(3px 3px 0 var(--pink)); }
   .ip-card:nth-child(3) .ip-figure { background: #B3E5FC; }
-  .ip-card:nth-child(4) .ip-figure { background: #D7CCC8; }
+  .ip-card:nth-child(4) .ip-figure { background: #E8D8E8; }
   .ip-card:nth-child(5) .ip-figure { background: #C8E6C9; }
   .ip-card:nth-child(6) .ip-figure { background: #FFE0B2; }
   .ip-card:nth-child(7) .ip-figure { background: #F8BBD0; }
@@ -889,8 +910,11 @@
     box-shadow: 6px 6px 0 var(--ink);
   }
 
+  .timeline-item:nth-child(odd) .timeline-content { margin-right: 4%; }
+  .timeline-item:nth-child(even) .timeline-content { margin-left: 4%; }
+
   .timeline-year {
-    font-family: 'Bangers', sans-serif;
+    font-family: 'Fredoka', 'ZCOOL KuaiLe', 'PingFang SC', sans-serif;
     font-size: 32px;
     line-height: 1;
     color: var(--pink);
@@ -924,16 +948,27 @@
 
   /* ============ 商店入口 ============ */
   .shop-section {
-    background:
-      linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
-      url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='3'/%3E%3CfeColorMatrix values='0 0 0 0 0.4  0 0 0 0 0.4  0 0 0 0 0.4  0 0 0 1 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"),
-      linear-gradient(135deg, #2a2a2a, #4a4a4a);
-    background-size: cover, 200px, cover;
+    background-color: var(--green);
+    background-image:
+      radial-gradient(circle, rgba(255,255,255,0.65) 5px, transparent 6px),
+      radial-gradient(circle, rgba(255,255,255,0.45) 3px, transparent 4px);
+    background-size: 50px 50px, 80px 80px;
+    background-position: 0 0, 25px 40px;
     margin: 60px 0;
     padding: 100px 24px;
     border-top: 6px solid var(--ink);
     border-bottom: 6px solid var(--ink);
-    color: white;
+    color: var(--ink);
+    position: relative;
+  }
+
+  .shop-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      url("data:image/svg+xml;utf8,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' seed='3'/%3E%3CfeColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.06 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    pointer-events: none;
   }
 
   .shop-card {
@@ -944,26 +979,29 @@
     border-radius: 30px;
     padding: 50px 40px;
     text-align: center;
-    box-shadow: 12px 12px 0 rgba(0,0,0,0.6);
+    box-shadow: 12px 12px 0 var(--ink);
     transform: rotate(-1deg);
     position: relative;
     color: var(--ink);
+    z-index: 2;
   }
 
   .shop-sticker {
     position: absolute;
     top: -30px;
     right: -20px;
-    background: var(--green);
-    color: var(--ink);
+    background: var(--pink);
+    color: white;
     padding: 15px 25px;
     border: 4px solid var(--ink);
     border-radius: 50% 40% 50% 40% / 40% 50% 40% 50%;
-    font-family: 'Bangers', sans-serif;
-    font-size: 24px;
+    font-family: 'Fredoka', 'ZCOOL KuaiLe', 'PingFang SC', sans-serif;
+    font-weight: 700;
+    font-size: 22px;
     box-shadow: 4px 4px 0 var(--ink);
     transform: rotate(15deg);
     animation: stickerBounce 2s ease-in-out infinite;
+    text-shadow: 2px 2px 0 var(--ink);
   }
 
   @keyframes stickerBounce {
@@ -972,7 +1010,7 @@
   }
 
   .shop-title {
-    font-family: 'Bangers', sans-serif;
+    font-family: 'Fredoka', 'ZCOOL KuaiLe', 'PingFang SC', sans-serif;
     font-size: 56px;
     line-height: 1;
     margin-bottom: 16px;
@@ -989,60 +1027,81 @@
 
   .shop-btn {
     display: inline-block;
-    background: var(--ink);
+    background: #4A8F5C;
     color: white;
     padding: 16px 40px;
     text-decoration: none;
-    font-family: 'Bangers', sans-serif;
-    font-size: 28px;
+    font-family: 'Fredoka', 'ZCOOL KuaiLe', 'PingFang SC', sans-serif;
+    font-weight: 700;
+    font-size: 26px;
     border: 4px solid var(--ink);
     border-radius: 50px;
     box-shadow: 5px 5px 0 var(--pink);
     transition: all 0.2s;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.03em;
   }
 
   .shop-btn:hover {
     transform: translate(-3px, -3px);
     box-shadow: 8px 8px 0 var(--pink);
-    background: var(--pink);
+    background: #3A7A4C;
   }
 
   /* ============ FOOTER ============ */
   footer {
-    background: var(--ink);
-    color: white;
-    padding: 60px 24px 30px;
+    background: var(--paper);
+    color: var(--ink);
+    padding: 80px 24px 30px;
     text-align: center;
-    border-top: 8px solid var(--pink);
+    position: relative;
+    border-top: none;
+    margin-top: 40px;
+  }
+
+  /* 手绘锯齿/波浪顶边 */
+  footer::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: 0;
+    right: 0;
+    height: 24px;
+    background-image: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 24' preserveAspectRatio='none'%3E%3Cpath d='M0 24 Q15 0 30 12 T60 12 L60 24 Z' fill='%23FFFBED' stroke='%233A2A1F' stroke-width='2.5'/%3E%3C/svg%3E");
+    background-repeat: repeat-x;
+    background-size: 60px 24px;
+    transform: translateY(-23px);
+    pointer-events: none;
   }
 
   .footer-title {
-    font-family: 'Bangers', sans-serif;
-    font-size: 48px;
+    font-family: 'Fredoka', 'ZCOOL KuaiLe', 'PingFang SC', sans-serif;
+    font-weight: 700;
+    font-size: 44px;
     margin-bottom: 20px;
-    color: var(--bg);
+    color: var(--pink);
+    text-shadow: 3px 3px 0 var(--ink);
   }
 
   .footer-disclaimer {
     max-width: 700px;
     margin: 0 auto 30px;
-    font-size: 13px;
-    line-height: 1.7;
-    color: #ccc;
+    font-size: 13.5px;
+    line-height: 1.9;
+    color: #5A4A3A;
   }
 
   .footer-bottom {
     margin-top: 40px;
-    padding-top: 20px;
-    border-top: 2px dashed #444;
+    padding-top: 24px;
+    border-top: 2px dashed #BCA48A;
     font-size: 12px;
-    color: #888;
+    color: #8A7563;
   }
 
   .footer-bottom a {
-    color: var(--green);
+    color: #4A8F5C;
     text-decoration: none;
+    font-weight: 600;
   }
 
   /* ============ 入场动画 ============ */
@@ -1094,13 +1153,13 @@
     </defs>
     <circle cx="100" cy="100" r="85" fill="var(--pink)" stroke="var(--ink)" stroke-width="6"/>
     <circle cx="100" cy="100" r="65" fill="var(--bg)" stroke="var(--ink)" stroke-width="4"/>
-    <text font-family="Bangers, Impact, sans-serif" font-size="22" font-weight="900" fill="var(--ink)">
+    <text font-family="Fredoka, ZCOOL KuaiLe, PingFang SC, sans-serif" font-size="22" font-weight="700" fill="var(--ink)">
       <textPath href="#circle-path" startOffset="0">
         ★ POP MART ★ NOT OFFICIAL ★ BUY BLIND BOX ★
       </textPath>
     </text>
-    <text x="100" y="92" text-anchor="middle" font-family="Bangers, sans-serif" font-size="28" font-weight="900" fill="var(--ink)">SINCE</text>
-    <text x="100" y="120" text-anchor="middle" font-family="Bangers, sans-serif" font-size="36" font-weight="900" fill="var(--pink)" stroke="var(--ink)" stroke-width="1.5">2010</text>
+    <text x="100" y="92" text-anchor="middle" font-family="Fredoka, ZCOOL KuaiLe, PingFang SC, sans-serif" font-size="28" font-weight="700" fill="var(--ink)">SINCE</text>
+    <text x="100" y="120" text-anchor="middle" font-family="Fredoka, ZCOOL KuaiLe, PingFang SC, sans-serif" font-size="36" font-weight="700" fill="var(--pink)" stroke="var(--ink)" stroke-width="1.5">2010</text>
   </svg>
 </div>
 
@@ -1348,9 +1407,9 @@
       <div class="ip-body">
         <h3 class="ip-name">THE MONSTERS<br>家族</h3>
         <p class="ip-desc">
-          上面是当家花旦 <strong>Labubu</strong>，但整个 THE MONSTERS 家族还有<span class="doodle-underline">Zimomo、Mokoko、Tycoco、Spooky</span> 等十几个角色。
-          全部出自 <strong>龙家升</strong>之手，森林精灵 + 暗黑童话的统一世界观。
-          一家人就是要整整齐齐——以及整整齐齐地掏空你的钱包。
+          除了当家花旦 <strong>Labubu</strong>，THE MONSTERS 还有<span class="doodle-underline">Zimomo、Mokoko、Tycoco</span> 等十几位森林精灵。
+          全部出自 <strong>龙家升</strong>之手，统一的暗黑童话世界观。
+          一家人就是要整整齐齐地掏空你的钱包。
         </p>
         <div class="ip-series">
           <span class="ip-series-title">代表系列</span>
